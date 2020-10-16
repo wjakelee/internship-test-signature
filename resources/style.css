@@ -60,3 +60,18 @@ body {
   color:  #2f90bd;
   font-weight: bold;
 }
+
+.submit-button {
+  margin: auto;
+  text-align: center;
+}
+
+.submit-button input {
+  width: 150px;
+  font-size: 25px;
+  padding: 10px;
+  border-color: black;
+  border-width: 3px;
+  color: black;
+  background-color:  #5ECAFB;;
+}
