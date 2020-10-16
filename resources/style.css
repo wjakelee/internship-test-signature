@@ -29,6 +29,11 @@ body {
   margin: auto;
   padding: 25px;
 }
-.attest-1, .attest-2, .user-input, .welcome {
+.attest-1, .attest-2, .user-input, .welcome, .signiture {
   padding: 20px;
+}
+
+.location, .date {
+  color: #34a2d4;
+  font-weight: bold;
 }
