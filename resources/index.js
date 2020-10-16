@@ -1,4 +1,4 @@
-//executes if a different color selectionis made
+//executes if a different color selection is made
 const changeColor = value => {
   if (value == "blue"){
     document.getElementById("header").style.backgroundColor =  "#5ECAFB"; //header color change
@@ -30,3 +30,19 @@ const changeColor = value => {
     document.getElementById("submit").style.backgroundColor =  "grey";    //submit color change
   }
 }
+
+// date value change
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1; 
+let yyyy = today.getFullYear();
+if(dd < 10) {
+  dd ='0'+ dd;
+} 
+
+if(mm < 10) {
+  mm ='0'+ mm;
+}
+
+today = mm + '/' + dd + '/' + yyyy;
+document.getElementById("date").innerHTML = today;
