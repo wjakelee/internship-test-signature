@@ -1,0 +1,34 @@
+body {
+  background-color: #D5F1FE;
+  margin: 0px;
+  font-family: 'Poppins';
+  font-size: 25px;
+}
+
+.header {
+  background-color: #5ECAFB;
+  text-align: center;
+}
+
+.page-title {
+  margin: 0px;
+  padding-top: 10px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.page-subtitle {
+  margin: 0px;
+  padding-bottom: 15px;
+  font-size: 20px;
+}
+
+.contract {
+  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+}
+.attest-1, .attest-2, .user-input, .welcome {
+  padding: 20px;
+}
