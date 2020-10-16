@@ -20,7 +20,28 @@ body {
 .page-subtitle {
   margin: 0px;
   padding-bottom: 15px;
-  font-size: 20px;
+  font-size: 20x;
+}
+
+.color-option {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.color-message {
+  font-size: 25px;
+  font-weight: bold;
+  color: #2f90bd;
+  display: inline;
+}
+
+.color-option select {
+  width: 200px;
+  height: 30px;
+  border-width: 3px;
+  border-color: grey;
+  color: grey;
 }
 
 .contract {
@@ -28,12 +49,14 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 25px;
+  padding-top: 0px;
 }
+
 .attest-1, .attest-2, .user-input, .welcome, .signiture {
   padding: 20px;
 }
 
 .location, .date {
-  color: #34a2d4;
+  color:  #2f90bd;
   font-weight: bold;
 }
