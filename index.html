@@ -20,7 +20,7 @@
 
   <!-- Contract form -->
   <div class="contract">
-    <form method="post" action="https://www.quixi.com/internship-form">
+    <form id="contract">
       
       <!-- implementation of color selector -->
       <div class="color-option">
@@ -48,7 +48,7 @@
 
         <tr>
           <td class="user-input">
-            Please type your full name as a legal record of completing the COVID-19 screening: <input type="text" name="name" placeholder="{type name here}" onkeypress="this.style.width = ((this.value.length + 1) * 12) + 'px';">
+            Please type your full name as a legal record of completing the COVID-19 screening: <input id="name" type="text" name="name" placeholder="{type name here}" onkeypress="this.style.width = ((this.value.length + 1) * 12) + 'px';">
           </td>
         </tr>
 
@@ -70,7 +70,7 @@
         <!-- submit button -->
         <tr>
           <td class="submit-button">
-            <input type="submit" value="Submit" id="submit">
+            <input id="submit" type="submit" name="submit" value="Submit">
           </td>
         </tr>
       </table>
@@ -78,50 +78,14 @@
     </form>
   </div>
 
+
 <!-- script for index.js -->
 <script type="text/javascript" src="./resources/index.js"></script>
 
+
 <!-- scripts for signature pad and submission-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
-<script>
-  let canvas = document.getElementById("sign");
-  let signaturePad = new SignaturePad(canvas);
-  let dataURL;
-
-  //reset canvas
-  const resetButton = () => {
-    signaturePad.clear();
-  };
-
-  // Adjust canvas coordinate space taking into account pixel ratio,
-  // to make it look crisp on mobile devices.
-  // This also causes canvas to be cleared.
-  function resizeCanvas() {
-    // When zoomed out to less than 100%, for some very strange reason,
-    // some browsers report devicePixelRatio as less than 1
-    // and only part of the canvas is cleared then.
-    var ratio =  Math.max(window.devicePixelRatio || 1, 1);
-
-    // This part causes the canvas to be cleared
-    canvas.width = canvas.offsetWidth * ratio;
-    canvas.height = canvas.offsetHeight * ratio;
-    canvas.getContext("2d").scale(ratio, ratio);
-
-    signaturePad.clear();
-  }
-
-  window.onresize = resizeCanvas;
-  resizeCanvas();
-
-  // savePNGButton.addEventListener("click", function (event) {
-  //   if (signaturePad.isEmpty()) {
-  //     alert("Please provide a signature first.");
-  //   } else {
-  //     let dataURL = signaturePad.toDataURL();
-  //   }
-  // });
-
-</script>
+<script type="text/javascript" src="./resources/script.js"></script>
 
 </body>
 </html>
