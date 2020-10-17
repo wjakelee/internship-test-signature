@@ -61,7 +61,7 @@ body {
   background-color: transparent;
 }
 
-.attest-1, .attest-2, .user-input, .welcome, .signiture {
+.attest-1, .attest-2, .user-input, .welcome, .signature {
   padding: 20px;
 }
 
@@ -83,4 +83,16 @@ body {
   border-width: 3px;
   color: white;
   background-color:  #5ECAFB;;
+}
+
+.sign {
+  border: 4px solid grey;
+  width: 300px;
+  height: 100px;
+}
+
+.reset-sign {
+  display: block;
+  padding: 5px;
+  margin-bottom: 15px;
 }

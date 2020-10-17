@@ -7,6 +7,7 @@
   <title>Covid-19 Contract</title>
   <link href="./resources/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type="text/css">
+  <script src="jquery-3.5.1.min.js"></script>
 </head>
 
 <body id="body">
@@ -57,7 +58,13 @@
 
         <!-- implementation of signiture pad -->
         <tr>
-          <td class="signiture">Please sign below:</td>
+          <td class="signature">Please sign below:</td>
+        </tr>
+        <tr>
+          <td>
+            <canvas id="sign" class="sign"></canvas>
+            <button id="reset-sign" class="reset-sign">Reset</button>
+          </td>
         </tr>
 
         <!-- submit button -->
@@ -70,8 +77,6 @@
 
     </form>
   </div>
-
-
 
 <script type="text/javascript" src="./resources/index.js"></script>
 

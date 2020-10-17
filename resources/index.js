@@ -46,3 +46,30 @@ if(mm < 10) {
 
 today = mm + '/' + dd + '/' + yyyy;
 document.getElementById("date").innerHTML = today;
+
+// let canvas = document.getElementById("sign");
+// let resetButton = document.getElementById("reset-sign");
+// let signaturePad = new SignaturePad(canvas);
+
+// signaturePad.minWidth = 5;
+// signaturePad.maxWidth = 10;
+// signaturePad.penColor = "rgb(66, 133, 244)";
+
+// // Returns signature image as data URL (see https://mdn.io/todataurl for the list of possible parameters)
+// signaturePad.toDataURL(); // save image as PNG
+// signaturePad.toDataURL("image/jpeg"); // save image as JPEG
+// signaturePad.toDataURL("image/svg+xml"); // save image as SVG
+
+// // Draws signature image from data URL.
+// // NOTE: This method does not populate internal data structure that represents drawn signature. Thus, after using #fromDataURL, #toData won't work properly.
+// signaturePad.fromDataURL("data:image/png;base64,iVBORw0K...");
+
+// // Returns signature image as an array of point groups
+// const data = signaturePad.toData();
+
+// // Draws signature image from an array of point groups
+// signaturePad.fromData(data);
+
+// resetButton.addEventListener("click", function (event) {
+//   signaturePad.clear();
+// });
