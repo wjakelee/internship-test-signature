@@ -7,7 +7,7 @@
   <title>Covid-19 Contract</title>
   <link href="./resources/style.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" type="text/css">
-  <script src="jquery-3.5.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body id="body">
@@ -63,7 +63,7 @@
         <tr>
           <td>
             <canvas id="sign" class="sign"></canvas>
-            <button id="reset-sign" class="reset-sign">Reset</button>
+            <button type="button" id="reset-sign" class="reset-sign" name="reset-sign" onclick="resetButton()">Reset</button>
           </td>
         </tr>
 
@@ -78,7 +78,50 @@
     </form>
   </div>
 
+<!-- script for index.js -->
 <script type="text/javascript" src="./resources/index.js"></script>
+
+<!-- scripts for signature pad and submission-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+<script>
+  let canvas = document.getElementById("sign");
+  let signaturePad = new SignaturePad(canvas);
+  let dataURL;
+
+  //reset canvas
+  const resetButton = () => {
+    signaturePad.clear();
+  };
+
+  // Adjust canvas coordinate space taking into account pixel ratio,
+  // to make it look crisp on mobile devices.
+  // This also causes canvas to be cleared.
+  function resizeCanvas() {
+    // When zoomed out to less than 100%, for some very strange reason,
+    // some browsers report devicePixelRatio as less than 1
+    // and only part of the canvas is cleared then.
+    var ratio =  Math.max(window.devicePixelRatio || 1, 1);
+
+    // This part causes the canvas to be cleared
+    canvas.width = canvas.offsetWidth * ratio;
+    canvas.height = canvas.offsetHeight * ratio;
+    canvas.getContext("2d").scale(ratio, ratio);
+
+    signaturePad.clear();
+  }
+
+  window.onresize = resizeCanvas;
+  resizeCanvas();
+
+  // savePNGButton.addEventListener("click", function (event) {
+  //   if (signaturePad.isEmpty()) {
+  //     alert("Please provide a signature first.");
+  //   } else {
+  //     let dataURL = signaturePad.toDataURL();
+  //   }
+  // });
+
+</script>
 
 </body>
 </html>
